@@ -1,0 +1,150 @@
+<style>
+    body
+    {
+            background-repeat: no-repeat;
+            background-size: 1550px;
+            background-position-y: center;
+            color: white;;
+            background-color: black;
+    }
+    
+  
+.log
+{
+   margin-top: unset;
+   text-align: center;
+}
+button
+{
+    margin: 5px;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: unset;
+    border-color: unset;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;    
+}
+button:hover
+{
+    background-color: whitesmoke;
+    color: black;
+}
+.d
+{
+    color: white;
+    font-size: 30px;
+text-align: center;
+position: absolute;
+top: 10px;
+left:570px;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-style: italic;
+
+
+
+}
+.w{
+    
+   margin-top: unset;
+   text-align: center;
+}
+
+.type{
+    margin-left: 50;
+    margin-top: 150;
+    border: 4px double white;
+    padding: 20px;;
+    width: 200px;
+    font-size: 20px;
+    height: 200px;
+    border-style: double;
+    border-width: 7px;
+    float:left;
+}
+.both{
+    margin-top: 150;
+margin-left: 250;
+border: 4px double white;
+padding: 20px;;
+width: 200px;
+font-size: 20px;
+height: 200px;
+border-style: double;
+border-width: 7px;
+float: left;
+}
+.location{
+    margin-top: 150;
+    margin-right: 50;
+border: 4px double white;
+padding: 20px;;
+width: 200px;
+font-size: 20px;
+height: 200px;
+border-style: double;
+border-width: 7px;
+float: right;
+}
+
+</style>
+
+
+
+    <body>
+            <div class="type">
+                <h2 class="log">SEARCH BY TYPE</h2>
+                <div class="w">
+                <form action="" method="post"  onsubmit="return getInputValue1()" >
+                <input type= "text" name="type" placeholder="Type" id="type" >  
+                 <br>
+                <br>
+            <button  > SEARCH </button>
+            <br>
+            <br>
+            <br>
+            <p id='typee' class="s"></p>
+            </div>
+            
+            </form>
+            </div>  
+</div>  
+
+<div class="location">
+    <h2 class="log">SEARCH BY LOCATION</h2>
+    <div class="w">
+    <form action="" method="post" onsubmit="return getInputValue2()">
+    <input type= "text" name="location" placeholder="Location" id="location" >  
+     <br>
+    <br>
+<button  > SEARCH </button>
+<br>
+<br>
+<br>
+<p id='loc' class="s"></p>
+</div>
+
+</form>
+</div>  
+
+
+<div class="both">
+    <h2 class="log">SEARCH BY BOTH</h2>
+    <div class="w">
+    <form action="" method="post" onsubmit="return getInputValue3()">
+    <input type= "text" name="type" placeholder="Type" id="typeb" >  
+    <input type= "text" name="location" placeholder="Location" id="locationb" >  
+     <br>
+    <br>
+<button  > SEARCH </button>
+<br>
+<br>
+<br>
+<p id='both' class="s"></p>
+</div>
+
+</form>
+</div>  
+    </body>
+    <script src="search.js"></script>  
+</html>

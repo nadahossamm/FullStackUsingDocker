@@ -1,0 +1,26 @@
+services:
+  cloud:
+    build:
+      context: E:\nada\Cloud
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: cloud
+    ports:
+    - published: 9090
+      target: 80
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\kerols\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\kerols\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  sql-server:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: 123456nada&
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 1433
+      target: 1433
+version: '3.4'
